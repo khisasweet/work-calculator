@@ -252,7 +252,7 @@
             
             table {
                 font-size: 0.85em;
-                min-width: 650px; /* Increased for checkbox column */
+                min-width: 750px; /* Increased for new column */
                 white-space: nowrap;
             }
             
@@ -325,7 +325,7 @@
 
             table {
                 font-size: 0.8em;
-                min-width: 600px;
+                min-width: 700px;
             }
 
             th, td {
@@ -389,10 +389,11 @@
                         <tr>
                             <th>Day</th>
                             <th>Worked?</th>
-                            <th>Time In (AM)</th>
-                            <th>Time Out (PM)</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
                             <th>Break Time (minutes)</th>
-                            <th>Work Hours</th>
+                            <th>Work Hours (Decimal)</th>
+                            <th>Work Hours (HH:MM)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -403,6 +404,7 @@
                             <td><input type="time" id="w1-mon-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w1-mon-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w1-mon-hours" class="work-hours">8.25</td>
+                            <td id="w1-mon-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Tuesday</td>
@@ -411,6 +413,7 @@
                             <td><input type="time" id="w1-tue-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w1-tue-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w1-tue-hours" class="work-hours">8.25</td>
+                            <td id="w1-tue-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Wednesday</td>
@@ -419,6 +422,7 @@
                             <td><input type="time" id="w1-wed-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w1-wed-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w1-wed-hours" class="work-hours">8.25</td>
+                            <td id="w1-wed-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Thursday</td>
@@ -427,6 +431,7 @@
                             <td><input type="time" id="w1-thu-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w1-thu-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w1-thu-hours" class="work-hours">8.25</td>
+                            <td id="w1-thu-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Friday</td>
@@ -435,6 +440,7 @@
                             <td><input type="time" id="w1-fri-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w1-fri-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w1-fri-hours" class="work-hours">8.25</td>
+                            <td id="w1-fri-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                     </tbody>
                 </table>
@@ -451,10 +457,11 @@
                         <tr>
                             <th>Day</th>
                             <th>Worked?</th>
-                            <th>Time In (AM)</th>
-                            <th>Time Out (PM)</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
                             <th>Break Time (minutes)</th>
-                            <th>Work Hours</th>
+                            <th>Work Hours (Decimal)</th>
+                            <th>Work Hours (HH:MM)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -465,6 +472,7 @@
                             <td><input type="time" id="w2-mon-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w2-mon-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w2-mon-hours" class="work-hours">8.25</td>
+                            <td id="w2-mon-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Tuesday</td>
@@ -473,6 +481,7 @@
                             <td><input type="time" id="w2-tue-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w2-tue-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w2-tue-hours" class="work-hours">8.25</td>
+                            <td id="w2-tue-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Wednesday</td>
@@ -481,6 +490,7 @@
                             <td><input type="time" id="w2-wed-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w2-wed-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w2-wed-hours" class="work-hours">8.25</td>
+                            <td id="w2-wed-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Thursday</td>
@@ -489,6 +499,7 @@
                             <td><input type="time" id="w2-thu-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w2-thu-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w2-thu-hours" class="work-hours">8.25</td>
+                            <td id="w2-thu-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                         <tr>
                             <td class="day-cell">Friday</td>
@@ -497,6 +508,7 @@
                             <td><input type="time" id="w2-fri-out" value="17:15" onchange="calculateHours()"></td>
                             <td><input type="number" id="w2-fri-break" value="30" min="0" onchange="calculateHours()"></td>
                             <td id="w2-fri-hours" class="work-hours">8.25</td>
+                            <td id="w2-fri-hours-hhmm" class="work-hours">8:15</td>
                         </tr>
                     </tbody>
                 </table>
@@ -555,19 +567,32 @@
             return true;
         }
 
+        function decimalToHHMM(decimalHours) {
+            const hours = Math.floor(decimalHours);
+            const minutes = Math.round((decimalHours - hours) * 60);
+            return `${hours}:${minutes.toString().padStart(2, '0')}`;
+        }
+
         function toggleWork(week, day) {
             const workedCheckbox = document.getElementById(`${week}-${day}-worked`);
             const timeInInput = document.getElementById(`${week}-${day}-in`);
             const timeOutInput = document.getElementById(`${week}-${day}-out`);
             const breakInput = document.getElementById(`${week}-${day}-break`);
             const hoursElement = document.getElementById(`${week}-${day}-hours`);
+            const hoursHHMMElement = document.getElementById(`${week}-${day}-hours-hhmm`);
             const row = workedCheckbox.closest('tr');
 
             if (workedCheckbox.checked) {
-                // Enable inputs
+                // Enable inputs and reset to default values
                 timeInInput.disabled = false;
                 timeOutInput.disabled = false;
                 breakInput.disabled = false;
+                
+                // Reset to default values
+                timeInInput.value = '08:30';
+                timeOutInput.value = '17:15';
+                breakInput.value = '30';
+                
                 row.classList.remove('row-disabled');
             } else {
                 // Disable inputs and clear values
@@ -578,6 +603,7 @@
                 timeOutInput.value = '';
                 breakInput.value = '0';
                 hoursElement.textContent = '0.00';
+                hoursHHMMElement.textContent = '0:00';
                 row.classList.add('row-disabled');
             }
             
@@ -590,15 +616,18 @@
             const timeOutId = `${week}-${day}-out`;
             const breakId = `${week}-${day}-break`;
             const hoursId = `${week}-${day}-hours`;
+            const hoursHHMMId = `${week}-${day}-hours-hhmm`;
 
             const timeInInput = document.getElementById(timeInId);
             const timeOutInput = document.getElementById(timeOutId);
             const breakInput = document.getElementById(breakId);
             const hoursElement = document.getElementById(hoursId);
+            const hoursHHMMElement = document.getElementById(hoursHHMMId);
 
             // If not worked, return 0 hours
             if (!workedCheckbox.checked) {
                 hoursElement.textContent = "0.00";
+                hoursHHMMElement.textContent = "0:00";
                 return 0;
             }
 
@@ -609,6 +638,7 @@
 
             if (!timeInValid || !timeOutValid || !breakValid) {
                 hoursElement.textContent = "Invalid";
+                hoursHHMMElement.textContent = "Invalid";
                 return 0;
             }
 
@@ -618,16 +648,16 @@
 
             if (!timeIn || !timeOut) {
                 hoursElement.textContent = "0.00";
+                hoursHHMMElement.textContent = "0:00";
                 return 0;
             }
 
             const timeInMinutes = timeToMinutes(timeIn);
-            const timeOutMinutes = timeToMinutes(timeOut);
+            let timeOutMinutes = timeToMinutes(timeOut);
             
+            // Handle overnight shifts (Time Out is next day)
             if (timeOutMinutes <= timeInMinutes) {
-                hoursElement.textContent = "Invalid";
-                timeOutInput.classList.add('error');
-                return 0;
+                timeOutMinutes += 24 * 60; // Add 24 hours
             }
 
             const totalMinutes = timeOutMinutes - timeInMinutes;
@@ -635,12 +665,14 @@
             
             if (workMinutes < 0) {
                 hoursElement.textContent = "Invalid";
+                hoursHHMMElement.textContent = "Invalid";
                 breakInput.classList.add('error');
                 return 0;
             }
 
             const workHours = parseFloat(minutesToHours(workMinutes));
             hoursElement.textContent = workHours.toFixed(2);
+            hoursHHMMElement.textContent = decimalToHHMM(workHours);
             
             return workHours;
         }
